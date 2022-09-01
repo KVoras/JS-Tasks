@@ -18,9 +18,9 @@ form.addEventListener("submit", (e) => {
 
   if (Number.isInteger(kg)) {
     let lb = Math.round(kg * 2.2046 * 100) / 100;
-    let g = Math.round(kg * 0.001 * 100) / 100;
+    let g = Math.round((kg / 0.001) * 100) / 100;
     let oz = Math.round(kg * 35.274 * 100) / 100;
-    output.innerHTML = `<span>Svarai: ${lb}</span><span>Gramai: ${g}</span><span>Uncijos: ${oz}</span>`;
+    output.innerHTML = `<div>Svarai: ${lb}</div><div>Gramai: ${g}</div><div>Uncijos: ${oz}</div>`;
   } else {
     alert("Kilogramai privalo būti išreikšti skaičiumi");
     search.value = "";
